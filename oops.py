@@ -1,4 +1,5 @@
-# class Factory:
+# inheritance use
+# # class Factory:
 #     a=12 #attribute
 
 #     def hello(self): #method
@@ -7,6 +8,8 @@
 #     print("hello how are you i am getting initialized")
 # print(Factory().a)
 # Factory().hello()
+
+
 
 
 
@@ -28,6 +31,7 @@
 # campus = factory("nylon",3,3)
 
 # reebok.show()
+
 
 
 
@@ -60,6 +64,9 @@
 
 
 
+
+
+
 # class Animal:
 #     def __init__(self,name):
 #         self.name=name
@@ -75,6 +82,14 @@
 # persion1=human("rahul")
 
 # persion1.show()
+
+
+
+
+
+
+
+
 
 
 
@@ -101,6 +116,14 @@
 
 # animal1.show()
 # human1.show()
+
+
+
+
+
+
+
+
 
 
 
@@ -138,3 +161,74 @@
 # factory3.show()
 # factory2.show()
 # factory1.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# polymorphism
+# #encapsulation
+
+# class Factory:
+#     __a="delhi"
+
+#     def show(self):
+#         print(Factory.__a)
+
+# obj=Factory()
+
+# obj.show()
+
+
+
+
+
+#abstraction (rules)
+# from abc import ABC,abstractmethod
+
+# class abstract(ABC):
+#     @abstractmethod
+#     def perimeter(self):
+#         pass
+
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+
+# class square (abstract):
+#     def __init__(self,side):
+#         self.side=side
+
+#     def perimeter(self):
+#         print("i have created")
+
+#     def area(self):
+#         print("i have created this")
+
+
+
+# class Circle(abstract):
+#     def __init__(self,radius):
+#         self.radius=radius
+
+
+#     def perimerter(self):
+#         print("i have created")
+
+#     def area(self):
+#         print("i have created this")
+
+
+# obj=Circle(7)
+# obj2=square(12)
+        
