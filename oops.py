@@ -232,3 +232,64 @@
 # obj=Circle(7)
 # obj2=square(12)
         
+
+
+class BankAccount:
+    def __init__(self, name):
+        self.name = name
+        self.balance = 0
+
+    def deposit(self, amount):
+        if amount <= 0:
+            print("Amount zero se zyada hona chahiye.")
+        else:
+            self.balance += amount
+            print(f"₹{amount:.2f} deposit ho gaye.")
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Amount zero se zyada hona chahiye.")
+        elif amount > self.balance:
+            print("Account mein itne paise nahi hain.")
+        else:
+            self.balance -= amount
+            print(f"₹{amount:.2f} withdraw ho gaye.")
+
+    def show_balance(self):
+        print(f"\nAccount holder: {self.name}")
+        print(f"Balance: ₹{self.balance:.2f}")
+
+
+name = input("Apna naam likho: ")
+account = BankAccount(name)
+
+while True:
+    print("\n----- Bank Account Manager -----")
+    print("1. Balance dekho")
+    print("2. Paise deposit karo")
+    print("3. Paise withdraw karo")
+    print("4. Exit")
+
+    choice = input("Apna option chuno: ")
+
+    try:
+        if choice == "1":
+            account.show_balance()
+
+        elif choice == "2":
+            amount = float(input("Kitne paise deposit karne hain? "))
+            account.deposit(amount)
+
+        elif choice == "3":
+            amount = float(input("Kitne paise withdraw karne hain? "))
+            account.withdraw(amount)
+
+        elif choice == "4":
+            print("Thank you! Phir milenge.")
+            break
+
+        else:
+            print("Please 1 se 4 ke beech option chuno.")
+
+    except ValueError:
+        print("Amount mein sirf number likho.")
